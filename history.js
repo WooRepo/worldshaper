@@ -1,4 +1,5 @@
 var ctx = document.getElementById("canvas").getContext("2d");
+window.onload=startCanvas
 class history {
     constructor(name, year, species, aggression, diet, habitat, lifespan, size, weight, speed, intelligence, population){
         this.name = name;
