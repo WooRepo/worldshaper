@@ -4,7 +4,7 @@ import seedrandom from 'seedrandom'
 const width = 200;
 const height = 200;
 
-const baseImg = await sharp("assets/kitty.jpeg").raw().toBuffer({ resolveWithObject: true });
+const baseImg = await sharp("assets/kitty.jpeg").resize(width,height).raw().toBuffer({ resolveWithObject: true });
 const baseImageBuffer = new Uint8ClampedArray(baseImg.data.buffer);
 
 function v2(x, y) {
@@ -42,8 +42,8 @@ for (let y = 0; y < height; y++) {
 		}*/
 		//if (distance(v[0], v2(x/width,y/height)) > 0.1) {
 		const generator = seedrandom(v[0].index);
-		const new_x = parseInt(x + generator() * 0);
-		const new_y = parseInt(y + generator() * 0);
+		const new_x = parseInt(x + generator() * 20);
+		const new_y = parseInt(y + generator() * 20);
 
     		const index2 = (new_y * width + new_x) * 3;
 	
