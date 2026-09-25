@@ -24,8 +24,8 @@ class history {
     }
 
 }
-const newStory = new history("", Math.random()*500000, "", "", "", "", "", Math.random()*200, 
-      Math.random()*100, Math.random()*50, Math.random()*10, Math.random()*1000000);
+const newStory = new history("", Math.random()*500000, "", "", "", "", Math.random()*200, Math.random()*300, 
+     Math.random()*200, "", "", Math.random()*1000000);
 newStory.tellHistory(newStory.name, Math.round(newStory.year), newStory.species, newStory.aggression, 
-      newStory.diet, newStory.habitat, Math.round(newStory.lifespan), Math.round(newStory.size), newStory.weight,
+      newStory.diet, newStory.habitat, Math.round(newStory.lifespan), Math.round(newStory.size), Math.round(newStory.weight),
       newStory.speed, newStory.intelligence, Math.round(newStory.population))
