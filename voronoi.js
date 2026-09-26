@@ -4,7 +4,7 @@ import seedrandom from 'seedrandom'
 const width = 1080;
 const height = 1920;
 
-const baseImg = await sharp("assets/kitty.jpeg").resize(width,height).raw().toBuffer({ resolveWithObject: true });
+const baseImg = await sharp("assets/researcher.jpeg").resize(width,height).raw().toBuffer({ resolveWithObject: true });
 const baseImageBuffer = new Uint8ClampedArray(baseImg.data.buffer);
 
 function v2(x, y) {
