@@ -1,40 +1,28 @@
-WORLDSHAPER
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>WORLDSHAPER</title>
+    <script>console.log(window.myGlobalVariable);</script>
+    <script type="module">
+      import { newStory } from "./history.js";
+      console.log(newStory);
+    </script>
     <style>
+      #openseadragon-viewer {
+        width: 100vw;
+        height: 100vh;
+        background-color: #111;
+      }
       body {
         margin: 0;
         overflow: hidden;
-        font-family: sans-serif;
       }
 
-      .app-container {
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-      }
-
-      #openseadragon-viewer {
-        flex: 1;
-        height: 100%;
-        background-color: #111;
-      }
-
-      .story-container {
-        flex: 1;
-        height: 100%;
-        background-color: #1a1a1a;
-        color: #fff;
-        padding: 24px;
-        box-sizing: border-box;
-        overflow-y: auto; 
-      }
     </style>
   </head>
   <body>
+<<<<<<< HEAD
     <div class="app-container">
       <div id="openseadragon-viewer"></div>
       <div class="story-container">
@@ -51,5 +39,11 @@ WORLDSHAPER
         storyElement.textContent = "Check the console for the History and information of planets.";
       }
     </script>
+=======
+    <div id="openseadragon-viewer"></div>
+>>>>>>> 23a8f3dfd14a172957b73a3bcf8345cb54d7f124
     <script type="module" src="./index.js"></script>
-  >
+    <script type="text/javascript" src="history.js"></script>
+    <script>console.log(window.myGlobalVariable);</script>
+  </body>
+</html>

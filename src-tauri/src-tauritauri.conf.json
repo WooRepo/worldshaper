@@ -1,0 +1,20 @@
+{
+  "productName": "WORLDSHAPER",
+  "version": "0.1.0",
+  "identifier": "com.worldshaper.app",
+  "app": {
+    "windows": [
+      {
+        "title": "WORLDSHAPER",
+        "url": "index.html",
+        "width": 1280,
+        "height": 800,
+        "resizable": true
+      }
+    ]
+  },
+  "build": {
+    "beforeBuildCommand": "",
+    "frontendDist": "../"
+  }
+}
