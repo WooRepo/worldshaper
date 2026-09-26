@@ -224,10 +224,10 @@ class history {
         this.rulerDescription = rulerDescription;
     }
     tellHistory(name, year, aggression, diet, habitat, lifespan, size, weight, speed, intelligence, population, areaNames, language, politicalSystem, advancement, rulerDescription){
-        console.log("Name: " + name + ", Year: " + year + ", Aggression: " + aggression + ", Diet: " + diet + ", Habitat: "
-                     + habitat + ", Lifespan: " + lifespan + ", Size: " + size + ", Weight: " + weight + ", Speed: " + speed
-                     + ", Intelligence: " + intelligence + ", Population: " + population + ", Area Names: " + areaNames +
-                     ", Language: " + language + ", Political System: " + politicalSystem + ", Most Recent Advancement: " + advancement + ", Ruler Description: " + rulerDescription);
+        console.log("Name: " + name + "\n Year: " + year + "\n Aggression: " + aggression + "\n Diet: " + diet + "\n Habitat: "
+                     + habitat + "\n Lifespan: " + lifespan + "\n Size: " + size + "\n Weight: " + weight + "\n Speed: " + speed
+                     + "\n Intelligence: " + intelligence + "\n Population: " + population + "\n Area Names: " + areaNames +
+                     "\n Language: " + language + "\n Political System: " + politicalSystem + "\n Most Recent Advancement: " + advancement + "\n Ruler Description: " + rulerDescription);
         if (earlyHistoryEvent == 1) {
             console.log(earlyHistoryEvent1);
         } else if (earlyHistoryEvent == 2) {
@@ -256,3 +256,5 @@ newStory.tellHistory(newStory.name, Math.round(newStory.year), newStory.aggressi
       Math.round(newStory.weight), newStory.speed, newStory.intelligence, Math.round(newStory.population)
       ,newStory.areaNames, newStory.language, newStory.politicalSystem, newStory.advancement, newStory.rulerDescription);
 console.log("advancement point: " + advancementPoint);
+export{newStory}    
+/* window.myGlobalVariable = newStory; */
