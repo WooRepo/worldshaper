@@ -256,5 +256,5 @@ newStory.tellHistory(newStory.name, Math.round(newStory.year), newStory.aggressi
       Math.round(newStory.weight), newStory.speed, newStory.intelligence, Math.round(newStory.population)
       ,newStory.areaNames, newStory.language, newStory.politicalSystem, newStory.advancement, newStory.rulerDescription);
 console.log("advancement point: " + advancementPoint);
-export{newStory}    
-/* window.myGlobalVariable = newStory; */
+//export{newStory}    
+window.myGlobalVariable = newStory;
