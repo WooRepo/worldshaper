@@ -24,6 +24,14 @@ let speciesNameArray = [consonants[Math.floor(Math.random() * consonants.length)
                     + consonants[Math.floor(Math.random() * consonants.length)]
                     ]
 
+let rulerDescriptionArray = ["new", "absolute", "last", "young", "sole", "powerful",
+    "real", "wise", "local", "independent", "single", "strong", "muslim", "present",
+    "chief", "sovereign", "rich", "legitimate", "foreign", "former", "ideal", "virtual", 
+    "native", "able", "civil", "temporal", "secular", "enlightened", "future", "actual", "true",
+    "religious", "military", "hereditary", "greatest", "weak", "rightful","divine", "traditional",
+    "mighty","autocratic","despotic","independent","absolute","autonomous","authoritarian"]
+let rulerDescription = rulerDescriptionArray[Math.floor(Math.random() * rulerDescriptionArray.length)];
+
 let LanguageNameArray = [speciesNameArray+ "i" + "s" + "h"]  
 
 /* let ancientAdvancementArray = ["Advanced Flight","Alphabet","Amphibious Warfare","Astronomy","Atomic Theory",
@@ -40,9 +48,45 @@ let LanguageNameArray = [speciesNameArray+ "i" + "s" + "h"]
                         "stealth", "steam engine", "steel", "superconductor", "tactics", "theology", "theory of gravity",
                         "trade", "university", "warrior code", "wheel", "writing"] */
 
-let ancientAdvancementArray = ["alphabet", "bridge building", "bronze working", "ceremonial burial", "code of laws", "construction","currency",]
+let ancientAdvancementArray = ["alphabet", "bridge building", "bronze working", "ceremonial burial",
+                                "code of laws", "construction","currency", "construction", "engineering",
+                                "feudalism", "horseback riding", "iron working", "literacy", "map making", 
+                                "mathematics", "medicine", "metallurgy", "mining", "monetary system",
+                                "monotheism", "navigation", "philosophy", "physics", "polytheism", "pottery", "republic", 
+                                "sanitation", "seafaring", "theology", "trade", "university", "warrior code",
+                                "wheel", "writing"];
+
+let ancientAdvancement = ancientAdvancementArray[Math.floor(Math.random() * ancientAdvancementArray.length)];
+
+let modernAdvancementArray = ["advanced flight", "amphibious warfare", "astronomy", "atomic theory",
+                                "automobile", "banking", "chemistry", "chivalry", "combined arms", "combustion",
+                                "communism", "computers", "conscription", "corporation", "democracy", "economics",
+                                "electricity", "electronics", "environmentalism", "espionage", "explosives",
+                                "fundamentalism", "fusion power", "future technology", "genetic engineering",
+                                "guerrilla warfare", "gunpowder", "industrialization", "invention", "labor union",
+                                "laser", "leadership", "machine tools", "magnetism", "mass production", "nuclear fission",
+                                "nuclear power", "plastics", "radio", "railroad", "recycling", "refining",
+                                "refrigeration", "robotics", "rocketry", "space flight", "stealth", "steam engine",
+                                "steel", "superconductor", "tactics", "theory of gravity"];
+
+let modernAdvancement = modernAdvancementArray[Math.floor(Math.random() * modernAdvancementArray.length)];
+
+let futureAdvancementArray = ["artificial intelligence", "biotechnology", "cloning", "cybernetics",
+                                "fusion power", "genetic engineering", "nanotechnology", "quantum computing",
+                                "space colonization", "terraforming", "virtual reality", "warp drive", "wormholes"];
+
+let futureAdvancement = futureAdvancementArray[Math.floor(Math.random() * futureAdvancementArray.length)];
+
+let renaissanceAdvancementArray = ["art", "architecture", "astronomy", "cartography", "classical learning",
+                                    "engineering", "exploration", "humanism", "literature", "mathematics",
+                                    "medicine", "music", "philosophy", "political theory", "printing press",
+                                    "science", "sculpture", "theology"];
+
+let renaissanceAdvancement = renaissanceAdvancementArray[Math.floor(Math.random() * renaissanceAdvancementArray.length)];
 
 let advancement = ancientAdvancementArray[Math.floor(Math.random() * ancientAdvancementArray.length)];
+
+let advancementPoint = Math.floor(Math.random() * 5);
 
 let aggressionArray = ["low", "medium", "high"];
 let aggression = aggressionArray[Math.floor(Math.random() * aggressionArray.length)];
@@ -72,11 +116,19 @@ let population = Math.floor(Math.random() * 1000000);
 
 /* let speciesName = speciesNameArray;
 const capitalisedSpeciesNames = speciesNameArray[0].toUpperCase(); */
-
+if (advancementPoint == 0) {
+    advancement = ancientAdvancement;
+} else if (advancementPoint == 1) {
+    advancement = renaissanceAdvancement;
+} else if (advancementPoint == 2) {
+    advancement = modernAdvancement;
+} else if (advancementPoint == 3) {
+    advancement = futureAdvancement;
+}
 //window.onload=startCanvas
 class history {
     constructor(name, year, aggression, diet, habitat, lifespan, size, weight, speed,
-                intelligence, population, areaNames, language, politicalSystem, advancement){
+                intelligence, population, areaNames, language, politicalSystem, advancement, rulerDescription) {
         this.name = name;
         this.year = year;
         this.aggression = aggression;
@@ -92,12 +144,13 @@ class history {
         this.language = language;
         this.politicalSystem = politicalSystem;
         this.advancement = advancement;
+        this.rulerDescription = rulerDescription;
     }
-    tellHistory(name, year, aggression, diet, habitat, lifespan, size, weight, speed, intelligence, population, areaNames, language, politicalSystem, advancement){
+    tellHistory(name, year, aggression, diet, habitat, lifespan, size, weight, speed, intelligence, population, areaNames, language, politicalSystem, advancement, rulerDescription){
         console.log("Name: " + name + ", Year: " + year + ", Aggression: " + aggression + ", Diet: " + diet + ", Habitat: "
                      + habitat + ", Lifespan: " + lifespan + ", Size: " + size + ", Weight: " + weight + ", Speed: " + speed
                      + ", Intelligence: " + intelligence + ", Population: " + population + ", Area Names: " + areaNames +
-                     ", Language: " + language + ", Political System: " + politicalSystem + ", Advancement: " + advancement);
+                     ", Language: " + language + ", Political System: " + politicalSystem + ", Advancement: " + advancement + ", Ruler Description: " + rulerDescription);
         
         
     }
@@ -108,8 +161,9 @@ class history {
 
 }
 const newStory = new history(speciesNameArray, year, aggression, diet, habitat, lifespan, size, weight, 
-      speed, intelligence, population, areaNames, LanguageNameArray, politicalSystem, advancement);
+      speed, intelligence, population, areaNames, LanguageNameArray, politicalSystem, advancement, rulerDescription);
 newStory.tellHistory(newStory.name, Math.round(newStory.year), newStory.aggression, 
       newStory.diet, newStory.habitat, Math.round(newStory.lifespan), Math.round(newStory.size), 
       Math.round(newStory.weight), newStory.speed, newStory.intelligence, Math.round(newStory.population)
-      ,newStory.areaNames, newStory.language, newStory.politicalSystem, newStory.advancement);
+      ,newStory.areaNames, newStory.language, newStory.politicalSystem, newStory.advancement, newStory.rulerDescription);
+console.log("advancement point: " + advancementPoint);
