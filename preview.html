@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <title>WORLDSHAPER</title>
+    <script>console.log(window.myGlobalVariable);</script>
+    <script type="module">
+      import { newStory } from "./history.js";
+      console.log(newStory);
+    </script>
     <style>
       #openseadragon-viewer {
         width: 100vw;
