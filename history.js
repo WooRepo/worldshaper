@@ -3,6 +3,9 @@
 let vowels = ["a", "e", "i", "o", "u"];
 let consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
 
+
+
+
 let areaNames = [consonants[Math.floor(Math.random() * consonants.length)] +
                     vowels[Math.floor(Math.random() * vowels.length)]
                     + consonants[Math.floor(Math.random() * consonants.length)] 
@@ -24,12 +27,24 @@ let speciesNameArray = [consonants[Math.floor(Math.random() * consonants.length)
                     + consonants[Math.floor(Math.random() * consonants.length)]
                     ]
 
+let leaderNameArray = [consonants[Math.floor(Math.random() * consonants.length)] +
+                    vowels[Math.floor(Math.random() * vowels.length)]
+                    + consonants[Math.floor(Math.random() * consonants.length)] 
+                    + consonants[Math.floor(Math.random() * consonants.length)]
+                    + vowels[Math.floor(Math.random() * vowels.length)]
+                    + consonants[Math.floor(Math.random() * consonants.length)]
+                    ]
+
+let leaderName = leaderNameArray[Math.floor(Math.random() * leaderNameArray.length)];
+
 let rulerDescriptionArray = ["new", "absolute", "last", "young", "sole", "powerful",
-    "real", "wise", "local", "independent", "single", "strong", "muslim", "present",
-    "chief", "sovereign", "rich", "legitimate", "foreign", "former", "ideal", "virtual", 
-    "native", "able", "civil", "temporal", "secular", "enlightened", "future", "actual", "true",
-    "religious", "military", "hereditary", "greatest", "weak", "rightful","divine", "traditional",
-    "mighty","autocratic","despotic","independent","absolute","autonomous","authoritarian"]
+                                "real", "wise", "local", "independent", "single", "strong", "muslim", "present",
+                                "chief", "sovereign", "rich", "legitimate", "foreign", "former", "ideal", "virtual", 
+                                "native", "able", "civil", "temporal", "secular", "enlightened", "future", "actual", "true",
+                                "religious", "military", "hereditary", "greatest", "weak", "rightful","divine", "traditional",
+                                "mighty","autocratic","despotic","independent","absolute","autonomous","authoritarian"
+                            ]
+
 let rulerDescription = rulerDescriptionArray[Math.floor(Math.random() * rulerDescriptionArray.length)];
 
 let LanguageNameArray = [speciesNameArray+ "i" + "s" + "h"]  
@@ -125,6 +140,34 @@ if (advancementPoint == 0) {
 } else if (advancementPoint == 3) {
     advancement = futureAdvancement;
 }
+
+let earlyHistoryEvent = Math.floor(Math.random() * 3) + 1;
+
+let earlyHistoryArrayEvent1 = ["The first civilization; the "+politicalSystem+" of "+leaderName+",  was formed in the year "+year+" BD. This "+politicalSystem+" was headed by King "+leaderName+" the IIV, who was noted to be a Tyrannical and Just. The "+politicalSystem+" was known as a trade hub for the region. However, after a succession of "+rulerDescription+" rulers, the king "+leaderName+", a Incompetent ruler, and the rise of power in the advisor "+leaderName+" the XXVI, lead to a collapse in the power of the "+politicalSystem+", leaving it to be abandoned and ransacked. ", 
+                        "The first civilization; the "+politicalSystem+" of "+leaderName+",  was formed in the year "+year+" BD. This "+politicalSystem+" was headed by King "+leaderName+" the IIV, who was noted to be a Tyrannical and Just. The "+politicalSystem+" was known as a trade hub for the region. However, after multiple attempts by revolutionary groups to remove the monarchy, the military was left weak, and was unable to beat back the invasion attempts of the republic of "+speciesNameArray+", leaving them with almost no power. ",
+                        "The first civilization; the "+politicalSystem+" of "+leaderName+", was formed in the year "+year+" BD. This "+politicalSystem+" was headed by King "+leaderName+" the IIV, who was noted to be a Tyrannical and Just. The "+politicalSystem+" was known as a trade hub for the region. However, as the "+politicalSystem+" expanded, it had to fight an expensive war with the republic of "+speciesNameArray+", it was a very expensive war with no real victory on either side, leaving the "+politicalSystem+" very militarily  weakened. ",
+                        "The first civilization; the "+politicalSystem+" of "+leaderName+", was formed in the year "+year+" BD. This "+politicalSystem+" was headed by King "+leaderName+" the IIV, who was noted to be a Tyrannical and Just. The "+politicalSystem+" was known as a trade hub for the region. As it expanded, and through invasion of rival powers, it became a more technologically advanced civilisation, becoming the most developed "+politicalSystem+" in the area, creating paved roads and distributing it throughout the "+politicalSystem+". ",
+                        "The first civilization; the "+politicalSystem+" of "+leaderName+", was formed in the year "+year+" BD. This "+politicalSystem+" was headed by King "+leaderName+" the IIV, who was noted to be a Tyrannical and Just. The "+politicalSystem+" was known as a trade hub for the region. As the "+politicalSystem+" expanded it became the economically dominant civilisation in the area. As well as that, a large war was fought with the republic of "+speciesNameArray+",  which lead to the destruction of "+speciesNameArray+"",
+]
+let earlyHistoryEvent1 = earlyHistoryArrayEvent1[Math.floor(Math.random() * earlyHistoryArrayEvent1.length)];
+
+let earlyHistoryArrayEvent2 = ["The first democratic system was implemented in "+areaNames+" in the year "+year+"AD  . Although not as representative as more modern democracy, it still gave the general public an opportunity to vote. However, conflict around the voting systems and results in polarized opinions lead to a bloody civil war in the year 12 AD , which lead to the near fffThe first democratic system was implemented in "+areaNames+" in the year "+year+"AD  . Although not as representative as more modern democracy, it still gave the general public an opportunity to vote. destruction of "+leaderName+", leaving it a weakened state back under a monarchy. ",
+                                "The first democratic system was implemented in "+areaNames+" in the year "+year+"AD  . Although not as representative as more modern democracy, it still gave the general public an opportunity to vote. However, in the year 35AD, the leader "+leaderName+" Mc EvilFaceBad was elected, who removed the concept of a free election and established a dictatorship with themselves at the center. It was a bloody and ruthless dictatorship, and when "+leaderName+" Mc EvilFaceBad  died in 75AD, "+areaNames+" was thrown into chaos. ",
+                                "The first democratic system was implemented in "+areaNames+" in the year "+year+"AD  . Although not as representative as more modern democracy, it still gave the general public an opportunity to vote. However, due to bureaucratic and under-representitive elections, combined with weak politicians, lead to the general weakening of "+leaderName+", and the reduction of power economically  in the region. ",
+                                "The first democratic system was implemented in "+areaNames+" in the year "+year+"AD  . Although not as representative as more modern democracy, it still gave the general public an opportunity to vote. This benefitted the region when "+leaderName+" the Just was elected in 18AD, who has gone down as a capable leader who advanced "+areaNames+" Economically and technologically. When he was finally unelected in 30AD, he left office gracefully. ",
+                                "The first democratic system was implemented in "+areaNames+" in the year "+year+"AD  . Although not as representative as more modern democracy, it still gave the general public an opportunity to vote. This lead to the formation of the Very Cool Not Dictator party, which has been constantly re-elected by the general population, not because it seized control illegally, but because a succession of great leaders such as "+leaderName+"dead and "+leaderName+"fraud, which brought the region into prosperity, making it the most Economically dominant state in the area."
+]
+let earlyHistoryEvent2 = earlyHistoryArrayEvent2[Math.floor(Math.random() * earlyHistoryArrayEvent2.length)];
+
+let earlyHistoryArrayEvent3 = ["In the year "+year+"BD, the destruction of the town "+speciesNameArray+"ville by the "+politicalSystem+" of "+speciesNameArray+"land, which worsened an already fractured relationship between "+speciesNameArray+"land and the "+politicalSystem+" of Freddread, who had sovereignty over "+speciesNameArray+"ville. This led to the first major war, the war of "+leaderName+". The conflict led to devastating losses on both sides, and the "+politicalSystem+" of "+leaderName+" McEvil, an area used to move troops and a major setting for many skirmishes, was completely destroyed.",
+    "In the year "+year+"BD, the destruction of the town "+speciesNameArray+"ville by the "+politicalSystem+" of "+speciesNameArray+"land, which worsened an already fractured relationship between "+speciesNameArray+"land and the "+politicalSystem+" of Freddread, who had sovereignty over "+speciesNameArray+"ville. This led to the first major war, the war of "+leaderName+". The conflict led to the reduction on both sides militarily and economically. While a treaty was eventually signed in 32VL, both sides had been diminished significantly",
+    "In the year "+year+"BD, the destruction of the town "+speciesNameArray+"ville by the "+politicalSystem+" of "+speciesNameArray+"land, which worsened an already fractured relationship between "+speciesNameArray+"land and the "+politicalSystem+" of Freddread, who had sovereignty over "+speciesNameArray+"ville. This led to the first major war, the war of "+leaderName+". While a treaty was eventually signed in 32VL, tensions have arisen and occasional breaches of treaty rules due to skirmishes have occurred. ",
+    "In the year "+year+"BD, the destruction of the town "+speciesNameArray+"ville by the "+politicalSystem+" of "+speciesNameArray+"land, which worsened an already fractured relationship between "+speciesNameArray+"land and the "+politicalSystem+" of Freddread, who had sovereignty over "+speciesNameArray+"ville. This led to the first major war, the war of "+leaderName+". However, after moderate losses on both sides, the leaders of "+speciesNameArray+"land and FredDread came to a mutual agreement. This led both states to prosper Economically and technologically. ",
+    "In the year "+year+"BD, the destruction of the town "+speciesNameArray+"ville by the "+politicalSystem+" of "+speciesNameArray+"land, which worsened an already fractured relationship between "+speciesNameArray+"land and the "+politicalSystem+" of Freddread, who had sovereignty over "+speciesNameArray+"ville. This led to the first major war, the war of "+leaderName+". However, the republic of "+leaderName+" McEvil organised a treaty between the both sides, leading to the two sides having an alliance which led to much prosperity for the two sides. "
+    ]
+let earlyHistoryEvent3 = earlyHistoryArrayEvent3[Math.floor(Math.random() * earlyHistoryArrayEvent3.length)];
+
+
 //window.onload=startCanvas
 class history {
     constructor(name, year, aggression, diet, habitat, lifespan, size, weight, speed,
@@ -151,7 +194,13 @@ class history {
                      + habitat + ", Lifespan: " + lifespan + ", Size: " + size + ", Weight: " + weight + ", Speed: " + speed
                      + ", Intelligence: " + intelligence + ", Population: " + population + ", Area Names: " + areaNames +
                      ", Language: " + language + ", Political System: " + politicalSystem + ", Advancement: " + advancement + ", Ruler Description: " + rulerDescription);
-        
+        if (earlyHistoryEvent == 1) {
+            console.log(earlyHistoryEvent1);
+        } else if (earlyHistoryEvent == 2) {
+            console.log(earlyHistoryEvent2);
+        } else {
+            console.log(earlyHistoryEvent3);
+        }
         
     }
 /*     capitalizeFirstLetter(str) {
