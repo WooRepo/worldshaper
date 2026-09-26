@@ -1046,9 +1046,5 @@ newStory.tellHistory(
   newStory.rulerDescription,
 );
 console.log("advancement point: " + advancementPoint);
-<<<<<<< HEAD
  
-=======
-export { newStory };
->>>>>>> faab484cf5cc8042e553857b4bc4e9139b132062
 //window.myGlobalVariable = newStory;
