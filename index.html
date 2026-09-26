@@ -6,13 +6,13 @@
     <script type="module">
         import { newStory } from "./history.js";
         console.log(newStory);
-        alert("Planet Information: " + newStory);
+        const strNewStory = JSON.stringify(newStory);
+        alert("Planet Information: " + strNewStory);
 
         const button = document.getElementById("myButton");
         const message = document.getElementById("message");
         button.addEventListener("click", function() {
-        message.textContent = newStory;
-        alert("Planet Information: " + newStory);
+            message.textContent = strNewStory;
         });
     </script>
     
@@ -22,6 +22,7 @@
 
   </head>
   <body>
+    <div id="message"></div>
 
   </body>
 </html>
