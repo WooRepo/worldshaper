@@ -44,7 +44,7 @@ WORLDSHAPER
 
     <script type="module">
       import { newStory } from "./history.js";
-      const strNewStory = JSON.stringify(newStory);
+      const strNewStory = JSON.stringify(newStory, null, 4);
       const storyElement = document.getElementById("story-text");
       if (storyElement) {
         storyElement.textContent = strNewStory;
