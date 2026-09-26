@@ -44,10 +44,10 @@ WORLDSHAPER
 
     <script type="module">
       import { newStory } from "./history.js";
-      
+      const strNewStory = JSON.stringify(newStory);
       const storyElement = document.getElementById("story-text");
       if (storyElement) {
-        storyElement.textContent = newStory;
+        storyElement.textContent = strNewStory;
       }
     </script>
     <script type="module" src="./index.js"></script>
