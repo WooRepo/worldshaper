@@ -249,12 +249,12 @@ class history {
     } */
 
 }
-const newStory = new history(speciesNameArray, year, aggression, diet, habitat, lifespan, size, weight, 
+export const newStory = new history(speciesNameArray, year, aggression, diet, habitat, lifespan, size, weight, 
       speed, intelligence, population, areaNames, LanguageNameArray, politicalSystem, advancement, rulerDescription);
 newStory.tellHistory(newStory.name, Math.round(newStory.year), newStory.aggression, 
       newStory.diet, newStory.habitat, Math.round(newStory.lifespan), Math.round(newStory.size), 
       Math.round(newStory.weight), newStory.speed, newStory.intelligence, Math.round(newStory.population)
       ,newStory.areaNames, newStory.language, newStory.politicalSystem, newStory.advancement, newStory.rulerDescription);
 console.log("advancement point: " + advancementPoint);
-export{newStory}    
+ 
 //window.myGlobalVariable = newStory;

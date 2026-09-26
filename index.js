@@ -1,6 +1,6 @@
 import OpenSeadragon from "https://cdn.jsdelivr.net/npm/openseadragon@4.1.0/+esm";
 var ctx
-window.onload = startcanvas;
+window.onload = startCanvas;
 function startCanvas(){
 	ctx=document.getElementById("myCanvas").getContext("2d")
 }
