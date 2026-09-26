@@ -1,5 +1,8 @@
 //let ctx = document.getElementById("canvas").getContext("2d");
 //const canvas = document.getElementById("canvas");
+window.onload=startCanvas
+ctx=document.getElementById("myCanvas").getContext("2d")
+
 let vowels = ["a", "e", "i", "o", "u"];
 let consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
 
@@ -216,3 +219,5 @@ newStory.tellHistory(newStory.name, Math.round(newStory.year), newStory.aggressi
       Math.round(newStory.weight), newStory.speed, newStory.intelligence, Math.round(newStory.population)
       ,newStory.areaNames, newStory.language, newStory.politicalSystem, newStory.advancement, newStory.rulerDescription);
 console.log("advancement point: " + advancementPoint);
+ctx.fillstyle="black"
+ctx.fillRect(0,0,canvas.width,canvas.height)
