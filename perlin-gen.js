@@ -127,6 +127,7 @@ function getBiomeColor(elevation) {
 }
 
 async function generateMap() {
+  console.log("beginning generation.");
   const buffer = Buffer.alloc(CONFIG.width * CONFIG.height * 4);
   let idx = 0;
 
