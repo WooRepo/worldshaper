@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>WORLDSHAPER</title>
+    <script>console.log(window.myGlobalVariable);</script>
+    <script type="module">
+      import { newStory } from "./history.js";
+      console.log(newStory);
+    </script>
+    <style>
+      #openseadragon-viewer {
+        width: 100vw;
+        height: 100vh;
+        background-color: #111;
+      }
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="openseadragon-viewer"></div>
+    <script type="module" src="./index.js"></script>
+    <script type="text/javascript" src="history.js"></script>
+    <script>console.log(window.myGlobalVariable);</script>
+  </body>
+</html>
