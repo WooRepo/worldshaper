@@ -1,28 +1,17 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: black;
-    }
-    button {
-      height: 30vh;
-      width: 60vh;
-      font-size: 30px;
-    }
-  </style>
-</head>
-<body>
-  <button id="btn">Generate World</button>
-  <script src="buttonlogic.js"></script>
-  <script>
-    const button = document.getElementById('btn');
-    button.addEventListener('click', run);
-  </script>
-</body>
+<html lang="en">
+    <script type="text/javascript" src="history.js"></script>
+    <script>console.log(window.myGlobalVariable);</script>
+    <script type="module">
+        import { newStory } from "./history.js";
+        console.log(newStory);
+    </script>
+    <head>
+    <meta charset="UTF-8">
+    <title>WORLDSHAPER</title>
+
+  </head>
+  <body>
+
+  </body>
 </html>

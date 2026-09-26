@@ -1,7 +1,8 @@
 import OpenSeadragon from "https://cdn.jsdelivr.net/npm/openseadragon@4.1.0/+esm";
-import { newStory } from "./history.js";
-function startCanvas() {
-  ctx = document.getElementById("myCanvas").getContext("2d");
+var ctx
+window.onload = startCanvas;
+function startCanvas(){
+	ctx=document.getElementById("myCanvas").getContext("2d")
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,4 +14,3 @@ document.addEventListener("DOMContentLoaded", () => {
     maxZoomLevel: 80,
   });
 });
-console.log(newStory);
