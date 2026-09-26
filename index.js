@@ -6,5 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     prefixUrl:
       "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/images/",
     tileSources: "worldmap.dzi",
+    maxZoomLevel: 80,
   });
 });
