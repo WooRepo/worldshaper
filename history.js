@@ -26,7 +26,7 @@ let speciesNameArray = [consonants[Math.floor(Math.random() * consonants.length)
 
 let LanguageNameArray = [speciesNameArray+ "i" + "s" + "h"]  
 
-let advancementArray = ["Advanced Flight","Alphabet","Amphibious Warfare","Astronomy","Atomic Theory",
+/* let ancientAdvancementArray = ["Advanced Flight","Alphabet","Amphibious Warfare","Astronomy","Atomic Theory",
                         "Automobile","Banking","Bridge Building","Bronze Working","Ceremonial Burial",
                         "Chemistry","Chivalry","Code of Laws","Combined Arms","Combustion","Communism",
                         "Computers", "conscription", "construction", "corporation", "currency", "democracy", "economics",
@@ -38,8 +38,11 @@ let advancementArray = ["Advanced Flight","Alphabet","Amphibious Warfare","Astro
                         "physics", "plastics", "polytheism", "pottery", "radio", "railroad", "recycling", "refining",
                         "refrigeration", "republic", "robotics", "rocketry", "sanitation", "seafaring", "space flight",
                         "stealth", "steam engine", "steel", "superconductor", "tactics", "theology", "theory of gravity",
-                        "trade", "university", "warrior code", "wheel", "writing"]
-let advancement = advancementArray[Math.floor(Math.random() * advancementArray.length)];
+                        "trade", "university", "warrior code", "wheel", "writing"] */
+
+let ancientAdvancementArray = ["alphabet", "bridge building", "bronze working", "ceremonial burial", "code of laws", "construction","currency",]
+
+let advancement = ancientAdvancementArray[Math.floor(Math.random() * ancientAdvancementArray.length)];
 
 let aggressionArray = ["low", "medium", "high"];
 let aggression = aggressionArray[Math.floor(Math.random() * aggressionArray.length)];
