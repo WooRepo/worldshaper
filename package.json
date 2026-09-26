@@ -19,6 +19,7 @@
     "test": "test"
   },
   "dependencies": {
+    "openseadragon": "^6.1.1",
     "perlin-noise": "^0.0.1",
     "seedrandom": "^3.0.5",
     "sharp": "^0.35.4",

@@ -2,8 +2,8 @@ import { createNoise2D } from "simplex-noise";
 import sharp from "sharp";
 
 const CONFIG = {
-  width: 1920,
-  height: 1080,
+  width: 3840,
+  height: 2160,
   scale: 0.004,
   warpScale: 0.002,
   warpStrength: 0.2,
@@ -12,28 +12,19 @@ const CONFIG = {
 
 const noise = createNoise2D();
 
-var colours = [
-  [0.35, [20, 50, 120]],
-  [0.4, [40, 90, 180]],
-  [0.46, [210, 200, 130]],
-  [0.6, [60, 140, 50]],
-  [0.7, [30, 90, 30]],
-  [0.82, [100, 90, 80]],
-  [Infinity, [240, 240, 250]],
-];
-
 const PLANETS = ["standard", "desert", "fireLand", "purplePalace", "random"];
+const selectedPlanet = PLANETS[Math.floor(Math.random() * PLANETS.length)];
+console.log(`Generating planet preset: ${selectedPlanet}`);
 
-var selectedPlanet = PLANETS[Math.floor(Math.random() * PLANETS.length)];
-console.log(selectedPlanet);
+let colours = [];
 
 if (selectedPlanet === "standard") {
   colours = [
-    [0.35, [20, 50, 120]], //deep sea
-    [0.4, [40, 90, 180]], //light sea
-    [0.46, [210, 200, 130]], //desert
-    [0.6, [60, 140, 50]], //light green
-    [0.7, [30, 90, 30]], //dark green
+    [0.35, [20, 50, 120]],
+    [0.4, [40, 90, 180]],
+    [0.46, [210, 200, 130]],
+    [0.6, [60, 140, 50]],
+    [0.7, [30, 90, 30]],
     [0.82, [100, 90, 80]],
     [Infinity, [240, 240, 250]],
   ];
@@ -166,11 +157,25 @@ async function generateMap() {
     }
   }
 
-  await sharp(buffer, {
-    raw: { width: CONFIG.width, height: CONFIG.height, channels: 4 },
-  }).toFile("worldMap.png");
+  const rawOptions = {
+    raw: {
+      width: CONFIG.width,
+      height: CONFIG.height,
+      channels: 4,
+    },
+  };
 
-  console.log("Map generated.");
+  await sharp(buffer, rawOptions).toFile("worldMap.png");
+  console.log("PNG map generated: worldMap.png");
+
+  await sharp(buffer, rawOptions)
+    .tile({
+      size: 256,
+      layout: "dz",
+    })
+    .toFile("worldMap");
+
+  console.log("DZI tiles generated successfully: worldMap.dzi");
 }
 
-generateMap();
+generateMap().catch(console.error);
