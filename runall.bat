@@ -1,0 +1,1 @@
+node history.js && node perlin-gen.js
