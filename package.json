@@ -19,13 +19,24 @@
     "test": "test"
   },
   "dependencies": {
-    "gpu.js": "^2.24.1",
+    "approve": "^0.0.12",
+    "canvas": "^3.2.3",
+    "gpu.js": "^1.10.4",
+    "noise": "^0.0.0",
     "perlin-noise": "^0.0.1",
+    "scripts": "^0.1.0",
     "seedrandom": "^3.0.5",
     "sharp": "^0.35.4",
+    "simplex": "^0.2.0",
     "simplex-noise": "^4.0.3"
   },
   "devDependencies": {
     "electron": "^44.4.5"
+  },
+  "keywords": [],
+  "allowScripts": {
+    "sharp@0.35.4": true,
+    "perlin-noise@0.0.1": true,
+    "canvas@3.2.3": true
   }
 }
