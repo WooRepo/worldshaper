@@ -4,11 +4,12 @@
 
 let vowels = ["a", "e", "i", "o", "u"];
 let consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
+let upconsonants = ["B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"];
 
 
 
 
-let areaNames = [consonants[Math.floor(Math.random() * consonants.length)] +
+let areaNames = [upconsonants[Math.floor(Math.random() * consonants.length)] +
                     vowels[Math.floor(Math.random() * vowels.length)]
                     + consonants[Math.floor(Math.random() * consonants.length)] 
                     + consonants[Math.floor(Math.random() * consonants.length)]
@@ -21,7 +22,7 @@ let areaNames = [consonants[Math.floor(Math.random() * consonants.length)] +
                     ]                  
 areaNames[0] = areaNames[0].charAt(0).toUpperCase() + areaNames[0].slice(1);
 
-let speciesNameArray = [consonants[Math.floor(Math.random() * consonants.length)] +
+let speciesNameArray = [upconsonants[Math.floor(Math.random() * consonants.length)] +
                     vowels[Math.floor(Math.random() * vowels.length)]
                     + consonants[Math.floor(Math.random() * consonants.length)] 
                     + consonants[Math.floor(Math.random() * consonants.length)]
@@ -31,7 +32,7 @@ let speciesNameArray = [consonants[Math.floor(Math.random() * consonants.length)
 let species = speciesNameArray[Math.floor(Math.random() * speciesNameArray.length)];
 speciesNameArray[0] = speciesNameArray[0].charAt(0).toUpperCase() + speciesNameArray[0].slice(1);
 
-let leaderNameArray = [consonants[Math.floor(Math.random() * consonants.length)] +
+let leaderNameArray = [upconsonants[Math.floor(Math.random() * consonants.length)] +
                     vowels[Math.floor(Math.random() * vowels.length)]
                     + consonants[Math.floor(Math.random() * consonants.length)] 
                     + consonants[Math.floor(Math.random() * consonants.length)]
@@ -256,5 +257,10 @@ newStory.tellHistory(newStory.name, Math.round(newStory.year), newStory.aggressi
       Math.round(newStory.weight), newStory.speed, newStory.intelligence, Math.round(newStory.population)
       ,newStory.areaNames, newStory.language, newStory.politicalSystem, newStory.advancement, newStory.rulerDescription);
 console.log("advancement point: " + advancementPoint);
+<<<<<<< HEAD
  
 //window.myGlobalVariable = newStory;
+=======
+export{newStory}    
+//window.myGlobalVariable = newStory;
+>>>>>>> 1ad7a274d60a2d0a0f5e2716941d4e665dab7d17
