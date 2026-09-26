@@ -1009,7 +1009,7 @@ class history {
             str.charAt(0).toUpperCase() + str.slice(1);
     } */
 }
-const newStory = new history(
+export const newStory = new history(
   speciesNameArray,
   year,
   aggression,

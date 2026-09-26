@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <script type="text/javascript" src="history.js"></script>
+    <button type="button" id="myButton">Planet INFORMATION</button>
     <script>console.log(window.myGlobalVariable);</script>
     <script type="module">
         import { newStory } from "./history.js";
         console.log(newStory);
+        alert("Planet Information: " + newStory);
+
+        const button = document.getElementById("myButton");
+        const message = document.getElementById("message");
+        document.getElementById("my-text").textContent = newStory;
+        button.addEventListener("click", function() {
+        message.textContent = newStory;
+        alert("Planet Information: " + newStory);
+        });
     </script>
+    
     <head>
     <meta charset="UTF-8">
     <title>WORLDSHAPER</title>
