@@ -19,10 +19,15 @@
     "test": "test"
   },
   "dependencies": {
+<<<<<<< Updated upstream
     "approve": "^0.0.12",
     "canvas": "^3.2.3",
     "gpu.js": "^1.10.4",
     "noise": "^0.0.0",
+=======
+    "express": "^5.2.1",
+    "gpu.js": "^2.24.1",
+>>>>>>> Stashed changes
     "perlin-noise": "^0.0.1",
     "scripts": "^0.1.0",
     "seedrandom": "^3.0.5",
